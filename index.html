@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Natália </title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body class="dark-mode">
+  <header data-aos="fade-down">
+    <button id="modo-toggle">🌙</button>
+    <h1>Olá, eu sou <span>Natália Bento</span></h1>
+    <p><i class="fas fa-code"></i> Desenvolvedora Fullstack</p>
+  </header>
+
+  <section class="sobre" data-aos="fade-up">
+    <h2>Sobre mim</h2>
+    <p>
+      Oi! meu nome é Natália, tenho uma graduação em psicologia e atualmente curso Análise e Desenvolvimento de Sistemas, além disso fiz cursos de desenvolvimento mobile e engenharia de dados.
+
+      Tenho paixão por essas duas tecnologias, principalmente no desenvolvimento front-end, também estou sempre buscando me atualizar, e sou apaixonada em Design Systems.
+    </p>
+  </section>
+
+  <section class="projetos" data-aos="fade-up">
+    <h2><i class="fas fa-laptop-code"></i> Projetos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Projeto App Series</h3>
+        <p>Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Mobile. A proposta era escolher uma API externa e criar um app funcional com base nos dados consumidos.</p>
+        <a href="/projetos.html" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="card">
+        <h3>Social Games</h3>
+        <p>Social Games é um site inspirado no "TV Show Time", mas voltado para gamers!
+
+        Funcionalidades:
+        - Criar postagens sobre jogos ou fases específicas;
+        - Compartilhar dificuldades ou conquistas no feed;
+        - Filtrar por categorias (PS5, Xbox, PC);
+        - Cadastro seguro com login e senha criptografada.
+
+        Tecnologias utilizadas:
+        Node.js + Express
+        MongoDB + Mongoose
+        Passport.js + bcrypt
+        Handlebars
+        JavaScript puro
+        Deploy via Render</p>
+        <a href="#" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="certificados" data-aos="fade-up">
+    <h2><i class="fas fa-certificate"></i> Certificados</h2>
+    <ul>
+      <li>Curso de HTML e CSS - 40h</li>
+      <li>Formação UX Design - 60h</li>
+      <li>JavaScript Moderno - 50h</li>
+    </ul>
+  </section>
+
+  <section class="curriculo" data-aos="fade-up">
+    <h2><i class="fas fa-file-alt"></i> Currículo</h2>
+    <a href="curriculo.pdf" target="_blank" class="btn-download">
+      <i class="fas fa-download"></i> Baixar Currículo
+    </a>
+  </section>
+
+  <section class="contato" data-aos="fade-up">
+    <h2><i class="fas fa-envelope"></i> Contato</h2>
+    <form action="https://formspree.io/f/xvgragjy" method="POST" class="formulario">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+    </form>
+  </section>
+
+  <section class="redes-sociais" data-aos="zoom-in">
+    <h2><i class="fas fa-share-alt"></i> Minhas redes</h2>
+    <div class="icones-redes">
+      <a href="https://github.com/NataliaBento" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href=https://www.linkedin.com/in/natalia-bento-364b2b235/ target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Natália Bento. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('modo-toggle');
+    btn.onclick = () => {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      btn.textContent = document.body.classList.contains('dark-mode') ? "🌙" : "☀️";
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+    anime({
+      targets: '.icones-redes a',
+      scale: [1, 1.1, 1],
+      duration: 2000,
+      delay: anime.stagger(200),
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+  </script>
+</body>
+</html>
